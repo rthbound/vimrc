@@ -1,7 +1,6 @@
 " Better use tabs in make files
 autocmd Filetype make setlocal noexpandtab
 
-" I like using tabs
 map <C-O>  :tabnew ./
 
 " But the following shortcuts for navigating tabs won't work when using buffers
@@ -9,6 +8,7 @@ map <C-O>  :tabnew ./
 "map <C-K> :tabprevious<CR>
 
 " These, however, will use :tabn/:tabp unless there are no tabs, then :bn/:bp
+" Do note: if you have a buffer with multiple tabs, the shortcut will not execute :bn/:bp
 :nnoremap <silent> <C-j> :<C-u>if tabpagenr('$') > 1<Bar>tabnext<Bar>else<Bar>bnext<Bar>endif<CR>
 :nnoremap <silent> <C-k> :<C-u>if tabpagenr('$') > 1<Bar>tabprevious<Bar>else<Bar>bp<Bar>endif<CR>
 
