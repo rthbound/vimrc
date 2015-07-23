@@ -1,8 +1,8 @@
 " Better use tabs in make files
 autocmd Filetype make setlocal noexpandtab
 
-map <C-O>  :tabnew ./ " Open new tab
-map <C-A>  ggVG " Select all in normal mode
+map <C-O>  :tabnew ./
+map <C-A>  ggVG
 
 " But the following shortcuts for navigating tabs won't work when using buffers
 "map <C-J> :tabnext<CR>
