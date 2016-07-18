@@ -3,6 +3,7 @@ autocmd Filetype make setlocal noexpandtab
 
 map <C-O>  :tabnew ./
 map <C-A>  ggVG
+map <C-n>  ggn
 
 " But the following shortcuts for navigating tabs won't work when using buffers
 "map <C-J> :tabnext<CR>
@@ -29,7 +30,7 @@ set tabpagemax=30
 set softtabstop=2
 set shiftwidth=2
 
-set smarttab
+"set smarttab
 
 set ai "Auto indent
 set si "Smart indent
@@ -38,3 +39,5 @@ set wrap "Wrap lines
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.thor set filetype=thor
 au! Syntax thor source $HOME/.vim/syntax/thor.vim
+
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
